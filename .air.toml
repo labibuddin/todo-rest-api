@@ -1,0 +1,19 @@
+# .air.toml
+
+# Tempat aplikasi dimulai
+cmd = "go run main.go"
+
+# Watcher
+[build]
+watch_mode = "notify"
+include_ext = ["go", "tpl", "tmpl", "html", "js", "css"]
+exclude_dir = ["vendor", "tmp"]
+
+# Kompilasi
+[build]
+bin = "app"
+cmd = "go build -o ./tmp/main ."
+
+# Output
+[log]
+output = "tmp/main"
